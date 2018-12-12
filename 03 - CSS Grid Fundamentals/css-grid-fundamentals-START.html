@@ -9,7 +9,29 @@
 </head>
 
 <body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+  </div>
 
+  <style>
+    .container {
+      display: grid;  /* makes all direct children css grid items */
+      /* TRACKS: columns and rows */
+      /* grid-template-columns: 100px 100px 100px; makes grid three columns of 100 pixels-wide */
+      grid-template-columns: 100px auto 100px 100px; /* `auto` will take up remaining room */
+      grid-template-rows: 200px 100px 400px; /* sizes first three rows and then rest follow "implicit grid" */
+      grid-gap: 20px; /* adds spacing bet columns and rows */
+    }
+  </style>
 </body>
 
 </html>
