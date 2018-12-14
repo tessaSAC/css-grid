@@ -18,7 +18,7 @@
     <div class="item item6">6</div>
     <div class="item item7">7</div>
     <div class="item item8">8</div>
-    <div class="item item8">💩</div>
+    <div class="item poop">💩</div>
     <div class="item item9">9</div>
     <div class="item item10">10</div>
     <div class="item item11">11</div>
@@ -48,6 +48,20 @@
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(5, 1fr);
+    }
+
+    .poop {
+      background: #BADA55;
+      /* grid-column: span 2;  this is actually shorthand for grid-column-start and grid-column-end */
+      grid-column-start: 2;  /* takes a TRACK-value */
+      grid-column-end: 5;  /* tells it where to end */
+      /* grid-column: 2 / 5;  equivalent to above */
+      /* grid-column: span 2 / 5;  span 2 and end at 5 */
+      /* grid-column: 1 / span 5;  start at 1 span 5 */
+      /* grid-column: 1 / -1;  start at first track, end at last */
+      /* grid-column: 1 / -2;  start at first track, end at second-to-last */
+      /* grid-row: 3 / span 3;  can do same for rows */
+      /* For rows though you need to specify the numbers of rows, otherwise it will displace the current rows */
     }
   </style>
 </body>
