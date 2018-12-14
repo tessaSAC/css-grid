@@ -21,7 +21,13 @@
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
-      grid-template-columns: repeat(auto-fill, 150px);
+      /* grid-template-columns: repeat(auto-fill, 150px);  What if items are larger than 150?? */
+
+      /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  minimum of 150px, max of the entire grid */
+      /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  no extra columns at the end, they will stretch to fit bigger widths */
+
+      /* grid-template-columns: auto 150px 150px 150px; the first column will take up remaining space */
+      grid-template-columns: fit-content(100px) 150px 150px 150px;  /* item will be CLAMPED to a max of 100px */
     }
   </style>
 </body>

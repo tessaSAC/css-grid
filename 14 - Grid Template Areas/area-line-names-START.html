@@ -46,6 +46,20 @@
     .container {
       display: grid;
       grid-gap: 20px;
+
+      grid-template-areas:
+        "💩 💩 💩 💩 🍔 🍔 🍔 🍔"
+        "💩 💩 💩 💩 🍔 🍔 🍔 🍔"
+        "💩 💩 💩 💩 🍔 🍔 🍔 🍔"
+        "💩 💩 💩 💩 🍔 🍔 🍔 🍔";
+    }
+
+    .item3 {
+      /* grid-area: 💩;  items that don't fit are moved down to implicit rows */
+
+      /* grid-column: 💩-start / 💩-end;  can append -start and -end to any named areas */
+      grid-column: 💩-start / 🍔-end; /* span poops and hamburgers */
+      grid-row-end: 💩-end; /* span bottom row of poop grid */
     }
   </style>
 </body>

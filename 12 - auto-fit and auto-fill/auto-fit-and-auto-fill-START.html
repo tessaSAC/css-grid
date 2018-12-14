@@ -37,6 +37,13 @@
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
+
+      grid-template-columns: repeat(auto-fill, 150px);  /* lets the grid figure out how many columns it needs to fill its size -- grid CONTINUES after max number of items */
+      /* grid-template-columns: repeat(auto-fit, 150px);  lets the grid figure out how many columns it needs to fill its size -- grid STOPS after max number of items */
+    }
+
+    .item4 {
+      grid-column-end: -1;  /* will go to end of grid with auto-fill but not auto-fit */
     }
   </style>
 </body>
