@@ -70,7 +70,32 @@
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
+      /* grid-template-columns: repeat(10, 1fr); */
+
+      border: 10px solid var(--yellow);
+      grid-template: repeat(5, 100px);
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(5, 100px);  /* create a lot of leftover space in grid */
+
+      /* justify-items: center;  default is stretch -- center places the item as large as it needs to be in the...center. There's also start and end (flex-start and flex-end) */
+      /* align-items: stretch;  these have the same options as above */
+      place-items: center center;  /* shorthand property -- cutting edge; make sure autoprefixer is working */
+
+      justify-content: space-around;  /* works similarly to flex-box */
+
+      height: 500px;
+      align-content: space-between;  /* again works similarly to flex-box; need a fixed height for this to do something */
+    }
+
+    .itm {
+      background: white;
+    }
+
+    .itm5 {
+      justify-self: center;
+      align-self: center;  /* can override on a case-by-case basis */
+
+      /* Wes prefers grid to flexbox for centering because unlike flexbox there's BOTH justify-self and align-self where one of them has been taken out of flexbox */
     }
   </style>
 </body>
